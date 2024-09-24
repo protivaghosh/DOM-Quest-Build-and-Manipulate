@@ -13,32 +13,47 @@ donateButton.addEventListener('click', function(){
         alert('Invaild to the button')
     }
 
-    //  expenses button
+//  expensive button
 const historyItem  =document.createElement('div');
-historyItem.classList ='bg-white p-3 rounded-md border border-gray-500';
+historyItem.classList ='bg-white p-3 rounded-md border border-gray-500 mt-4';
 historyItem.innerHTML =`
-<p class="text-xs text-gray-500">${new Date().toLocaleDateString()}</p>
+<p class=text-xl>${donationAmount.toFixed()} Taka is Donated for famine-2024 at  Noakhali, Bangladesh</p>
+<p class="text-xl text-gray-500">${new Date().toLocaleDateString()}</p>
 `;
 let historyContainer =document.getElementById('history-item');
 historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 })
 
 // Donate for Flood Relief in Feni button
-const donateBtn =document.getElementById('donate-button');
-donateBtn.addEventListener('click', function(){
-    let donatAmount =parseFloat(document.getElementById('donation-amount').value); 
-    if(donatAmount > 0){
+const donateNow =document.getElementById('donate-button');
+donateNow.addEventListener('click', function(){
+    let selectAmount =parseFloat(document.getElementById('input-donation-amount').value);
+    if(selectAmount > 0){
         const amount = parseFloat(document.getElementById('amount').innerText);
-        let fixedAmount = amount - donatAmount;
-        document.getElementById('amount').innerText =fixedAmount;
-        const bdtSection =parseFloat(document.getElementById('bdt-section').innerText);
-        let section= bdtSection + donatAmount; 
-        document.getElementById('bdt-section').innerText = section;
+        let allAmount = amount - selectAmount;
+        document.getElementById('amount').innerText =allAmount;
+        const coinSection =parseFloat(document.getElementById('coin-section').innerText);
+        let fixedSection = coinSection + selectAmount;
+        document.getElementById('coin-section').innerText = fixedSection;
+
     }
     else{
-        alert('Invaild to the button')
+        alert('invaild to the button');
     }
+
+//  expensive button
+const historyItem  =document.createElement('div');
+historyItem.classList ='bg-white p-3 rounded-md border border-gray-500';
+historyItem.innerHTML =`
+<p class=text-xl>${selectAmount.toFixed()} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+<p class="text-xl text-gray-500">${new Date().toLocaleDateString()}</p>
+`;
+let historyContainer =document.getElementById('history-item');
+historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
 })
+
+
 
 
 
