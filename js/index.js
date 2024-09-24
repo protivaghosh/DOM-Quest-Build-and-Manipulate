@@ -53,7 +53,24 @@ historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
 })
 
+// Aid for Injured in the Quota Movement donate button
+const btnDonate =document.getElementById('btn-donate');
+btnDonate.addEventListener('click', function(){
+    let amountDonation =parseFloat(document.getElementById('amount-donation').value);
+    if(amountDonation > 0){
+        const amount = parseFloat(document.getElementById('amount').innerText);
+        let fixedAmount = amount - amountDonation;
+        document.getElementById('amount').innerText =fixedAmount;
+        const countSection = parseFloat(document.getElementById('count-section').innerText);
+        let fixedCount = countSection + amountDonation;
+        document.getElementById('count-section').innerText = fixedCount;
 
+
+    }
+    else{
+        alert('invaild to the button');
+    }
+})
 
 
 
