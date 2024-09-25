@@ -13,12 +13,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="">
     <header class="bg-orange-100">
      <section class="w-11/12 h-32 mx-auto">
    <div class="flex justify-between items-center p-4">
     <div><a href="./blog.html"><button class="btn bg-lime-500 text-xl">Blog</button></a></div>
-    <div class="flex justify-center items-center gap-2">
+    <div class="hidden lg:flex justify-center items-center gap-2">
       <div><img src="./assets/logo.png" alt=""></div>
       <div><span class="text-2xl font-semibold">Donate Bangladesh</span></div>
     </div>
@@ -37,7 +37,7 @@
       
       <div id="history-section">
         <section>
-          <div class="grid grid-cols-2 gap-8 mt-10 w-11/12 mx-auto border rounded-xl p-7">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 w-11/12 mx-auto border rounded-xl p-7">
             <div>
               <img class="w-full" src="./assets/noakhali.png" alt="">
             </div>
@@ -48,10 +48,23 @@
             <input id="donation-amount" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mt-5" required />
             <label class="label">
             <button id="donate-now" class="text-xl bg-lime-500 btn w-full mt-5">Donate Now</button>
+             <!-- hidden button -->
+             <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+              <div class="bg-white p-6 rounded-lg shadow-lg w-1/3 flex flex-col justify-center items-center">
+                <h2 class="text-3xl font-bold mb-4">Congrates!</h2>
+                <img class="mb-4" src="./assets/coin.png" alt="">
+                <p class="mb-4">You Have Donate for Humankind</p>
+                <h2 class="text-xl font-bold mb-6">Successfully</h2>
+                <button id="closeBtn" class="bg-gray-300 text-black px-4 py-2 rounded hover:bg-lime-600">
+                  Close Confirmation
+                </button>
+              </div>
+              </div>
+
             </div>
           </div>
           <!-- Donate for Flood Relief in Feni,Bangladesh  section start -->
-          <div class="grid grid-cols-2 gap-8 mt-10 w-11/12 mx-auto border rounded-xl p-7">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 w-11/12 mx-auto border rounded-xl p-7">
             <div>
               <img class="w-full" src="./assets/feni.png" alt="">
             </div>
@@ -62,11 +75,23 @@
             <input id="input-donation-amount" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mt-5" required />
             <label class="label">
             <button id="donate-button" class="text-xl bg-lime-500 btn w-full mt-5">Donate Now</button>
+            <!-- hidden button -->
+            <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+              <div class="bg-white p-6 rounded-lg shadow-lg w-1/3 flex flex-col justify-center items-center">
+                <h2 class="text-3xl font-bold mb-4">Congrates!</h2>
+                <img class="mb-4" src="./assets/coin.png" alt="">
+                <p class="mb-4">You Have Donate for Humankind</p>
+                <h2 class="text-xl font-bold mb-6">Successfully</h2>
+                <button id="closeBtn" class="bg-gray-300 text-black px-4 py-2 rounded hover:bg-lime-600">
+                  Close Confirmation
+                </button>
+              </div>
+              </div>
             </div>
           </div>
            <!-- Donate for Flood Relief in Feni,Bangladesh section end -->
             <!-- Aid for Injured in the Quota Movement section start -->
-            <div class="grid grid-cols-2 gap-8 mt-10 w-11/12 mx-auto border rounded-xl p-7">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 w-11/12 mx-auto border rounded-xl p-7">
               <div>
                 <img class="w-full" src="./assets/quota-protest.png" alt="">
               </div>
@@ -76,15 +101,31 @@
               <p class="text-base text-gray-500 mt-5">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
               <input id="amount-donation" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mt-5" required />
               <label class="label">
-              <button id="btn-donate" class="text-xl bg-lime-500 btn w-full mt-5">Donate Now</button>
-              </div>
+             
+              <button id="btn-donate"class="text-xl bg-lime-500 btn w-full mt-5">Donate Now</button>
+              <!-- hidden button -->
+              <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+                <div class="bg-white p-6 rounded-lg shadow-lg w-1/3 flex flex-col justify-center items-center">
+                  <h2 class="text-3xl font-bold mb-4">Congrates!</h2>
+                  <img class="mb-4" src="./assets/coin.png" alt="">
+                  <p class="mb-4">You Have Donate for Humankind</p>
+                  <h2 class="text-xl font-bold mb-6">Successfully</h2>
+                  <button id="closeBtn" class="bg-gray-300 text-black px-4 py-2 rounded hover:bg-lime-600">
+                    Close Confirmation
+                  </button>
+                </div>
+                </div>
+           </div>
             </div>
             <!-- Aid for Injured in the Quota Movement section end -->
         </section>
       </div>
-      <div id="history-item" class="mt-10"></div>
+      <div id="history-item" class="mt-10 hidden"></div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="w-full h-40 bg-orange-100 mt-10"></div>
+    </footer>
+    <script src="./js/utilities.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>

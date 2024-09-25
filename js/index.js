@@ -17,7 +17,7 @@ donateButton.addEventListener('click', function(){
 const historyItem  =document.createElement('div');
 historyItem.classList ='bg-white p-3 rounded-md border border-gray-500 mt-4';
 historyItem.innerHTML =`
-<p class=text-xl>${donationAmount.toFixed()} Taka is Donated for famine-2024 at  Noakhali, Bangladesh</p>
+<p class=text-xl>${donationAmount.toFixed()}  Taka is Donated for famine-2024 at  Noakhali, Bangladesh</p>
 <p class="text-xl text-gray-500">${new Date().toLocaleDateString()}</p>
 `;
 let historyContainer =document.getElementById('history-item');
@@ -41,9 +41,10 @@ donateNow.addEventListener('click', function(){
         alert('invaild to the button');
     }
 
+
 //  expensive button
 const historyItem  =document.createElement('div');
-historyItem.classList ='bg-white p-3 rounded-md border border-gray-500';
+historyItem.classList ='bg-white p-3 rounded-md border border-gray-500 mt-4';
 historyItem.innerHTML =`
 <p class=text-xl>${selectAmount.toFixed()} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
 <p class="text-xl text-gray-500">${new Date().toLocaleDateString()}</p>
@@ -70,7 +71,17 @@ btnDonate.addEventListener('click', function(){
     else{
         alert('invaild to the button');
     }
-})
+
+    //  expensive button
+const historyItem  =document.createElement('div');
+historyItem.classList ='bg-white p-3 rounded-md border border-gray-500 mt-4';
+historyItem.innerHTML =`
+<p class=text-xl>${amountDonation.toFixed()}  Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+<p class="text-xl text-gray-500">${new Date().toLocaleDateString()}</p>
+`;
+let historyContainer =document.getElementById('history-item');
+historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+});
 
 
 
@@ -96,6 +107,8 @@ assistantTab.addEventListener('click', function(){
     document.getElementById('history-section').classList.remove('hidden');
     document.getElementById('history-item').classList.add('hidden');
 })
+
+// ---------****-------
 
 
 
