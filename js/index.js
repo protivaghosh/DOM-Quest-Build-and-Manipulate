@@ -95,8 +95,9 @@ historyTab.addEventListener('click', function(){
     
    document.getElementById('history-section').classList.add('hidden');
    document.getElementById('history-item').classList.remove('hidden');
+   document.getElementById('footer button').classList.add('hidden');
 })
-- // ---------------------
+ // ---------------------
 assistantTab.addEventListener('click', function(){
 
     assistantTab.classList.add('bg-lime-500');
@@ -106,6 +107,7 @@ assistantTab.addEventListener('click', function(){
     
     document.getElementById('history-section').classList.remove('hidden');
     document.getElementById('history-item').classList.add('hidden');
+    document.getElementById('footer button').classList.remove('hidden');
 })
 
 // ---------****-------
