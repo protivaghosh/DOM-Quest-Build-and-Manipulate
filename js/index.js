@@ -87,7 +87,7 @@ historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
 // --------------
 const historyTab =document.getElementById('history-tab');
-const assistantTab =document.getElementById('assistant-tab');
+const assistantTab =document.getElementById('donation-tab');
 historyTab.addEventListener('click', function(){
 
     historyTab.classList.add('bg-lime-500');

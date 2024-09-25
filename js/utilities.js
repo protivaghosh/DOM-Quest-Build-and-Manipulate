@@ -17,7 +17,7 @@ window.addEventListener('click', (e) => {
 });
 
 
-// -----------------------------
+// -----------------------------donate button
 const donate = document.getElementById('donate-button');
 const modalAdd = document.getElementById('modal');
 const close = document.getElementById('closeBtn');
@@ -36,7 +36,7 @@ window.addEventListener('click', (e) => {
   }
 });
 
-// -----------------------
+// -----------------------donate now 
 const buttonDonate = document.getElementById('donate-now');
 const addModal = document.getElementById('modal');
 const buttonClose = document.getElementById('closeBtn');
@@ -53,4 +53,10 @@ window.addEventListener('click', (e) => {
   if (e.target === modal) {
     addModal.classList.add('hidden');
   }
+});
+
+// scroll button
+const scrollableDiv = document.getElementById('scroll-section');
+scrollableDiv.addEventListener('scroll', function() {
+    console.log('Scrolling...');
 });
